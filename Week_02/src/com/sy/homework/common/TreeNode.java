@@ -15,7 +15,7 @@ public class TreeNode {
      *       1       1 2 3 4 5 6
      *     2   3
      *    4 5 6
-     * 按照层序遍历构建一棵完全二叉树
+     * 按照层序遍历构建一棵完全二叉树，方便写测试用例
      * @return
      */
     public static TreeNode generateATree(int[] arr){
