@@ -13,7 +13,7 @@ HashMap有四个重载构造函数，分别是：HashMap(), HashMap(int initialC
 如果初始化指定一个容量，则会使用指定的容量（前提得是2的倍数），如果不是2的倍数，会将输入的值调整为大于等于这个数的2的倍数。具体算法如下：
 
 ```java
-	static final int tableSizeFor(int cap) {
+static final int tableSizeFor(int cap) {
         int n = cap - 1;
         n |= n >>> 1;
         n |= n >>> 2;
@@ -47,7 +47,7 @@ HashMap有四个重载构造函数，分别是：HashMap(), HashMap(int initialC
    首先对传入的key进行hash()，jdk8中的hash方法是将key的hashCode异或上key的hashCode无符号右移16位，如下代码：
 
    ```java
-   	static final int hash(Object key) {
+   static final int hash(Object key) {
            int h;
            return (key == null) ? 0 : (h = key.hashCode()) ^ (h >>> 16);
        }
