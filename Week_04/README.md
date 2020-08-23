@@ -42,7 +42,8 @@ public int findMin(int[] nums){
 若nums[mid]>nums[high]，说明nums[mid]属于左半有序段，左半有序段无法判断其最大值是多少，但是可以知道最小值一定是nums[low]，所以可以通过比较target与nums[mid]以及target与nums[low]来确定应该往哪个范围寻找，若nums[mid]>target && nums[low]<=target则说明target位于low和mid之间的位置，可以使high=mid-1缩小范围继续查找，否则使low=mid+1
 
 ```java
-int low=0,high=nums.length-1;
+public int search(int[] nums, int target) {
+        int low=0,high=nums.length-1;
         while(low<=high){
             int mid=low+high>>1;
             if(target==nums[mid]){
@@ -70,5 +71,6 @@ int low=0,high=nums.length-1;
             }
         }
         return -1;
+    }
 ```
 
